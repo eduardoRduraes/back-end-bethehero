@@ -3,26 +3,26 @@ version: '3.9'
 services:
     database:
         image: mongo:5
-        container_name: db_bethehero
-        restart: alaways
+        container_name: db-bethehero
+        restart: always
         volumes:
             - ./data:/data/db
         ports:
-            - "27017:27017"
+            - 27017:27017
 
     app:
         build: .
-        container_name: db_bethehero
-        restart: alaways
+        container_name: bethehero
+        restart: always
         ports:
             - 3333:3333
             - 9229:9229
         volumes:
             - .:/usr/app
         links:
-            - db_bethehero
+            - database
         depends_on:
-            - db_bethehero
+            - database
 
 volumes:
     data:
