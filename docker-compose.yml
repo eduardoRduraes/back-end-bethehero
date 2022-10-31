@@ -1,0 +1,29 @@
+version: '3.9'
+
+services:
+    database:
+        image: mongo:5
+        container_name: db_bethehero
+        restart: alaways
+        volumes:
+            - ./data:/data/db
+        ports:
+            - "27017:27017"
+
+    app:
+        build: .
+        container_name: db_bethehero
+        restart: alaways
+        ports:
+            - 3333:3333
+            - 9229:9229
+        volumes:
+            - .:/usr/app
+        links:
+            - db_bethehero
+        depends_on:
+            - db_bethehero
+
+volumes:
+    data:
+        driver: local

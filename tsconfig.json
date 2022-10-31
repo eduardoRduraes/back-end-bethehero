@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "es2019",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "module": "commonjs",
+    "rootDir":"./src",
+    "baseUrl": "./src",
+    "paths":{
+        "@modules/*":["modules/*"],
+        "@config/*":["config/*"],
+        "@shared/*":["shared/*"],
+        "@errors/*":["errors/*"],
+        "@utils/*":["utils/*"],
+    },
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["./dist"]
+}
