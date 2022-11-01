@@ -1,3 +1,12 @@
+import env from "@utils/env";
+
+import { MongoHelper } from "../mongodb/mongo-helper";
 import { app } from "./app";
 
-app.listen(3333, () => console.log("server is running!!!"));
+MongoHelper.connect(env.mongoURL)
+    .then(() => {
+        app.listen(env.port, () =>
+            console.log("server is running 🏃🏃🏃🏃 !!!")
+        );
+    })
+    .catch((err) => console.log(err));
