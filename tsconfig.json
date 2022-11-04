@@ -11,11 +11,12 @@
         "@config/*":["config/*"],
         "@shared/*":["shared/*"],
         "@errors/*":["errors/*"],
-        "@utils/*":["utils/*"],
+        "@utils/*":["utils/*"]
     },
     "esModuleInterop": true,
+    "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
-    "strict": false,
+    "strict": true,
     "skipLibCheck": true
   },
   "include": ["src/**/*.ts"],
