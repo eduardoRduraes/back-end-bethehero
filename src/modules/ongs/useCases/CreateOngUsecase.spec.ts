@@ -32,7 +32,7 @@ describe("Create Ong", () => {
         await createOngUseCase.execute(makeFakeOng());
 
         await expect(createOngUseCase.execute(makeFakeOng())).rejects.toEqual(
-            new AppError("Ong already exists!")
+            new AppError("Ong already exists!", 401)
         );
     });
 });

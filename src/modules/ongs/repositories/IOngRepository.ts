@@ -11,9 +11,9 @@ interface IOngRepository {
         uf,
     }: ICreateOngDTO): Promise<IOngModel>;
 
-    findById(id: string): Promise<IOngModel>;
+    findById(id: string): Promise<IOngModel | null>;
 
-    findByEmail(email: string): Promise<IOngModel>;
+    findByEmail(email: string): Promise<IOngModel | null>;
 }
 
 export { IOngRepository };

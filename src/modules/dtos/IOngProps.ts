@@ -1,5 +1,7 @@
+import { ObjectId } from "mongodb";
+
 interface IOngProps {
-    id: string;
+    _id: ObjectId;
     name: string;
     email: string;
     whatsapp: string;
